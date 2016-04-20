@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model>
+    <modeltype>2D</modeltype>
+    <joint id="1">0,0</joint>
+    <joint id="2">0,1</joint>
+    <joint id="3">1,1</joint>
+    <joint id="4">1,0</joint>
+    <element>
+        <fromto>1,2</fromto>
+        <constraints>1,1,0,1,1,1</constraints>
+    </element>
+    <element>
+        <fromto>2,3</fromto>
+        <constraints>1,1,1,1,1,0</constraints>
+    </element>
+    <element>
+        <fromto>3,4</fromto>
+        <constraints>1,1,0,1,1,1</constraints>
+    </element>
+    <support>
+        <at>1</at>
+        <constraints>1,1,0</constraints>
+        <settlements>0,0,0</settlements>
+    </support>
+    <support>
+        <at>4</at>
+        <constraints>1,1,1</constraints>
+        <settlements>0,0,0</settlements>
+    </support>
+</model>
