@@ -1,0 +1,24 @@
+# model file example
+model:
+  dim: 2
+  type: dynamic
+  joint:
+    1: 0, 0, 0, 0, 0
+    2: 0, 1, 1, 0, 0
+  material:
+    1:
+      type: linear
+      EA: 1
+      EI: 1
+      m: 0
+  element:
+    1, 2: 1
+  load:
+    1: sin(2*t)
+  # dynamic specified data
+  joint_mass:
+    2: 1
+  initial_status:
+    u: 0
+    v: 0
+    a: 0

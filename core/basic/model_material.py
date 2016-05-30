@@ -19,7 +19,13 @@ class MaterialBase():
     def __init__(self):
         pass
 
-    def get_k(self, u = 0):
+    def get_EA(self, u = 0):
+        return 0
+
+    def get_EI(self, u = 0):
+        return 0
+
+    def get_m(self):
         return 0
 
 class LinearMaterial(MaterialBase):
@@ -34,6 +40,15 @@ class LinearMaterial(MaterialBase):
             self.EA = EA
             self.EI = EI
             self.m = m
+
+    def get_EA(self, u = 0):
+        return self.EA
+
+    def get_EI(self, u = 0):
+        return self.EI
+
+    def get_m(self):
+        return self.m
 
 class NonlinearMaterial(MaterialBase):
     def __init__(self, parms=None):
